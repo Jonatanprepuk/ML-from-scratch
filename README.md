@@ -68,21 +68,17 @@ model.plot_loss()
 ```
 ML-from-scratch/
 ├── ml/               # Core package
-│   ├── base.py       # Trainable abstractions
-│   ├── nn.py         # Layers and model definitions
-│   ├── losses.py     # Loss function implementations
-│   ├── optimizers.py # Optimization algorithms
-│   ├── metrics.py    # Evaluation metrics
-│   └── utils.py      # Helper functions and dataset loaders
+│   ├── base.py       # Abstract class for trainable objects
+│   ├── datasets/     # Functions for generating synthetic datasets.
+│   ├── regression/   # Linear regression models
+│   ├── nn/           # Layers, accuracies and model definitions
+│   ├── losses/       # Loss function implementations
+│   └── optimizers/   # Optimization algorithms
 ├── examples/         # Example scripts
-├── tests/            # Unit tests
 ├── requirements.txt  # Dependencies
 └── LICENSE           # MIT License
 ```
 
-## Contributing
-
-Contributions, bug reports, and feature requests are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
