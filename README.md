@@ -30,26 +30,37 @@
 ## Quickstart
 
 ```python
-from ml import Model, LayerInput, Dense, ActivationLayer, ReLU, Softmax
-from ml.losses import CategoricalCrossentropy
+from ml.nn import *
 from ml.optimizers import Adam
-from ml.metrics import AccuracyCategorical
+from ml.losses import CategoricalCrossentropy
+from ml.datasets import blobs_data
+import matplotlib.pyplot as plt
+
+# Generate data
+X, y, X_test, y_test = blobs_data(classes=5, samples_per_class=200, seed=1234, test_split=0.2)
+
 
 # Build and compile the model
-model = Model([
-    LayerInput(784),
-    Dense(128), ActivationLayer(ReLU()),
-    Dense(10), ActivationLayer(Softmax()),
-])
-model.compile(
-    loss=CategoricalCrossentropy(),
-    optimizer=Adam(learning_rate=0.001),
-    accuracy=[AccuracyCategorical()]
+model = Model(
+    Dense(X.shape[1], 64),
+    LeakyReLU(alpha=0.3),
+    Dense(64,64),
+    LeakyReLU(alpha=0.3),
+    Dense(64,64),
+    LeakyReLU(alpha=0.3),
+    Dense(64, 5),
+    Softmax()
 )
 
-# Train and evaluate
-model.fit(x_train, y_train, epochs=5, batch_size=32)
-model.evalute()
+model.set(loss=CategoricalCrossentropy(), 
+          optimizer=Adam(learning_rate=0.0001, decay=1e-2), 
+          accuracy=AccuracyCategorical())
+
+model.finalize()
+
+# Train and plot loss 
+model.train(X,y, epochs=500, print_every=100, batch_size=64, validation_data=(X_test, y_test))
+model.plot_loss()
 ```
 
 ## Project Structure
