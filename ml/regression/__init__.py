@@ -1,0 +1,2 @@
+from .linear_analytic import LinearRegressionAnalytic
+from .linear_gradient import LinearRegressionGradient
