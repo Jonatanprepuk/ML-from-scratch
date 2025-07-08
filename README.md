@@ -5,7 +5,7 @@
 ## Overview
 
 * **Regression** – Linear regression (analytical and gradient based).
-* **Neural Networks** – Modular framework with layers such as `Dense`, `Conv2D`, `MaxPooling2D`, `Flatten` and `Dropout` and activation functions such as `Leaky RelU`, `ReLU`, `Sigmoid`, `Softmax`.
+* **Neural Networks** – Modular framework with layers such as `Dense`, `Conv2D`, `MaxPooling2D`, `Flatten` and `Dropout` and activation functions such as `Leaky ReLU`, `ReLU`, `Sigmoid`, `Softmax`.
 * **Loss Functions** – `MeanSquareError`, `MeanAbsoluteError`, `CategoricalCrossentropy`, `BinaryCrossentropy`.
 * **Optimizers** – `SGD`, `Adagrad`, `RMSprop`, `Adam`.
 * **Examples** – Scripts for MNIST classification, regression on synthetic datasets, and more.
