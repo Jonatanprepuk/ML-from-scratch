@@ -11,7 +11,7 @@
 * **Examples** – Scripts for MNIST classification, regression on synthetic datasets, and more.
 * **Datasets** – Utilities for loading common datasets.
 
-> This project builds upon concepts and code examples from the book [*Neural Networks from Scratch*](https://github.com/Sentdex/nnfs_book) by Harrison Kinsley & Daniel Kukieła.
+> This project builds upon concepts and code examples from the book [*Neural Networks from Scratch*](https://nnfs.io/) by Harrison Kinsley & Daniel Kukieła.
 
 ## Installation
 
@@ -75,8 +75,10 @@ ML-from-scratch/
 │   ├── losses/       # Loss function implementations
 │   └── optimizers/   # Optimization algorithms
 ├── examples/         # Example scripts
-├── requirements.txt  # Dependencies
-└── LICENSE           # MIT License
+├── setup.py          
+├── requirements.txt  
+├── README.md         
+└── LICENSE           
 ```
 
 
