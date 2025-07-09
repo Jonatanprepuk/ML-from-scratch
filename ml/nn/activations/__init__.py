@@ -5,6 +5,7 @@ from .relu import ReLU
 from .sigmoid import Sigmoid
 from .softmax import Softmax
 from .tanh import Tanh
+from .selu import SELU
 
 
 __all__ = [
@@ -15,4 +16,5 @@ __all__ = [
     "Sigmoid",
     "Softmax",
     "Tanh",
+    "SELU",
 ]

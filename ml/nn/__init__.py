@@ -1,7 +1,7 @@
 from .layers import Dense, Conv2D, Flatten, LayerInput, Dropout, Layer, MaxPooling2d
 from .accuracies import AccuracyCategorical, AccuracyRegression, Accuracy
 from .model import Model
-from .activations import ReLU, Sigmoid, LeakyReLU, Softmax, Linear, ActivationLayer, Tanh
+from .activations import ReLU, Sigmoid, LeakyReLU, Softmax, Linear, ActivationLayer, Tanh, SELU
 
 __all__ = [
     "Layer",
@@ -21,5 +21,6 @@ __all__ = [
     "ReLU",
     "Sigmoid",
     "Softmax",
-    "Tanh"
+    "Tanh",
+    "SELU"
 ]
