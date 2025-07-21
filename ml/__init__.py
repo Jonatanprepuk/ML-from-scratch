@@ -1,4 +1,4 @@
-from .nn import Layer, Conv2D, Dense, Dropout, Flatten, MaxPooling2d, LayerInput, Accuracy, AccuracyCategorical, AccuracyRegression, Model, ActivationLayer, LeakyReLU, ReLU, Sigmoid, Softmax, Linear, Tanh
+from .neural_network import Layer, Conv2D, Dense, Dropout, Flatten, MaxPooling2d, LayerInput, Accuracy, AccuracyCategorical, AccuracyRegression, Model, ActivationLayer, LeakyReLU, ReLU, Sigmoid, Softmax, Linear, Tanh
 from .losses import Loss, MeanSquareError, MeanAbsoluteError, CategoricalCrossentropy, BinaryCrossentropy, SoftmaxCategoricalCrossentropy
 from .optimizers import Optimizer, Adagrad, Adam, RMSprop, SGD
 from .base import Trainable
