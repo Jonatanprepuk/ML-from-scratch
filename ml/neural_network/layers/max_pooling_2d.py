@@ -2,6 +2,21 @@ import numpy as np
 from .base import Layer
 
 class MaxPooling2d(Layer):
+    """
+    2D max pooling layer that downsamples the input by taking the maximum
+    value in each sliding window.
+
+    **Note**: This implementation uses nested loops and is not optimized for speed.
+
+    Attributes:
+        pool_h (int): Height of the pooling window.
+        pool_w (int): Width of the pooling window.
+        stride_h (int): Stride along the height.
+        stride_w (int): Stride along the width.
+        inputs (np.ndarray): Stored input for use in the backward pass.
+        output (np.ndarray): Output after max pooling.
+    """
+    
     #TODO Optimera - nuvarande lösning är extremt långsam pga näslade for-loopar. 
     def __init__(self, *, pool_size:tuple[int, int]=(2, 2), stride:tuple[int, int]=(1, 1)):
         self.pool_h, self.pool_w = pool_size
@@ -9,6 +24,13 @@ class MaxPooling2d(Layer):
          
     
     def forward(self, inputs:np.ndarray, training:bool):
+        """
+        Performs the forward pass using max pooling.
+
+        Args:
+            inputs (np.ndarray): Input tensor of shape (batch_size, channels, height, width).
+            training (bool): Whether the model is in training mode (not used here).
+        """
         self.inputs = inputs
         batch_size, channels, height, width = inputs.shape
         
@@ -33,6 +55,15 @@ class MaxPooling2d(Layer):
                         
     
     def backward(self, dvalues):
+        """
+        Performs the backward pass for max pooling.
+
+        Propagates gradients only through the maximum value in each pooling window.
+
+        Args:
+            dvalues (np.ndarray): Gradient of the loss with respect to the output,
+                                  shape (batch_size, channels, output_height, output_width).
+        """
         batch_size, channels, output_height, output_width = dvalues.shape
         dinputs = np.zeros(self.inputs.shape)
         
