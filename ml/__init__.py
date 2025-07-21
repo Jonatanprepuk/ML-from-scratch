@@ -2,6 +2,8 @@ from .nn import Layer, Conv2D, Dense, Dropout, Flatten, MaxPooling2d, LayerInput
 from .losses import Loss, MeanSquareError, MeanAbsoluteError, CategoricalCrossentropy, BinaryCrossentropy, SoftmaxCategoricalCrossentropy
 from .optimizers import Optimizer, Adagrad, Adam, RMSprop, SGD
 from .base import Trainable
+from .neighbors import KNNClassifier, manhattan, euclidean
+from .datasets import blobs_data, sine_data, linear_data
 
 __all__ = [
     "Layer",
@@ -35,4 +37,10 @@ __all__ = [
     "RMSprop",
     "SGD",
     "Tanh",
+    "KNNClassifier", 
+    "manhattan", 
+    "euclidean",
+    "blobs_data", 
+    "sine_data", 
+    "linear_data",
 ]
