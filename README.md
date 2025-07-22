@@ -10,7 +10,7 @@
 * **Loss Functions** – `MeanSquareError`, `MeanAbsoluteError`, `CategoricalCrossentropy`, `BinaryCrossentropy`.
 * **Optimizers** – `SGD`, `Adagrad`, `RMSprop`, `Adam`.
 * **Examples** – Scripts for MNIST classification, regression on synthetic datasets, and more.
-* **Datasets** – Utilities for loading common datasets.
+* **Datasets** – Functions for generating synthetic datasets
 
 > This project builds upon concepts and code examples from the book [*Neural Networks from Scratch*](https://nnfs.io/) by Harrison Kinsley & Daniel Kukieła.
 
@@ -71,7 +71,7 @@ ML-from-scratch/
 ├── ml/                     # Core package
 │   ├── base.py             # Abstract class for trainable objects
 │   ├── classification/     # Classification models, knn, naive bayes
-│   ├── datasets/           # Functions for generating synthetic datasets.
+│   ├── datasets/           # Functions for generating synthetic datasets
 │   ├── regression/         # Linear regression models
 │   ├── nn/                 # Layers, accuracies and model definitions
 │   ├── losses/             # Loss function implementations
