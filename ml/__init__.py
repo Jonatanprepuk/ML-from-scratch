@@ -2,7 +2,7 @@ from .neural_network import Layer, Conv2D, Dense, Dropout, Flatten, MaxPooling2d
 from .losses import Loss, MeanSquareError, MeanAbsoluteError, CategoricalCrossentropy, BinaryCrossentropy, SoftmaxCategoricalCrossentropy
 from .optimizers import Optimizer, Adagrad, Adam, RMSprop, SGD
 from .base import Trainable
-from .neighbors import KNNClassifier, manhattan, euclidean
+from .classification import KNNClassifier, manhattan, euclidean, GaussianNB
 from .datasets import blobs_data, sine_data, linear_data
 
 __all__ = [
@@ -37,7 +37,8 @@ __all__ = [
     "RMSprop",
     "SGD",
     "Tanh",
-    "KNNClassifier", 
+    "KNNClassifier",
+    "GaussianNB"
     "manhattan", 
     "euclidean",
     "blobs_data", 
