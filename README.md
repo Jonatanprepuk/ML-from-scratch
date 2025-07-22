@@ -5,6 +5,7 @@
 ## Overview
 
 * **Regression** – Linear regression (analytical and gradient based).
+* **Classification** – K-Nearest Neighbors and Gaussian Naive Bayes
 * **Neural Networks** – Modular framework with layers such as `Dense`, `Conv2D`, `MaxPooling2D`, `Flatten` and `Dropout` and activation functions such as `Leaky ReLU`, `ReLU`, `Sigmoid`, `Softmax`.
 * **Loss Functions** – `MeanSquareError`, `MeanAbsoluteError`, `CategoricalCrossentropy`, `BinaryCrossentropy`.
 * **Optimizers** – `SGD`, `Adagrad`, `RMSprop`, `Adam`.
@@ -67,14 +68,15 @@ model.plot_loss()
 
 ```
 ML-from-scratch/
-├── ml/               # Core package
-│   ├── base.py       # Abstract class for trainable objects
-│   ├── datasets/     # Functions for generating synthetic datasets.
-│   ├── regression/   # Linear regression models
-│   ├── nn/           # Layers, accuracies and model definitions
-│   ├── losses/       # Loss function implementations
-│   └── optimizers/   # Optimization algorithms
-├── examples/         # Example scripts
+├── ml/                     # Core package
+│   ├── base.py             # Abstract class for trainable objects
+│   ├── classification/     # Classification models, knn, naive bayes
+│   ├── datasets/           # Functions for generating synthetic datasets.
+│   ├── regression/         # Linear regression models
+│   ├── nn/                 # Layers, accuracies and model definitions
+│   ├── losses/             # Loss function implementations
+│   └── optimizers/         # Optimization algorithms
+├── examples/               # Example scripts
 ├── setup.py          
 ├── requirements.txt  
 ├── README.md         
