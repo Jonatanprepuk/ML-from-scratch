@@ -3,7 +3,7 @@ from .losses import Loss, MeanSquareError, MeanAbsoluteError, CategoricalCrossen
 from .optimizers import Optimizer, Adagrad, Adam, RMSprop, SGD
 from .base import Trainable
 from .classification import KNNClassifier, manhattan, euclidean, GaussianNB
-from .datasets import blobs_data, sine_data, linear_data
+from .datasets import blobs_data_2d, blobs_data_3d, sine_data, linear_data
 
 __all__ = [
     "Layer",
@@ -41,7 +41,8 @@ __all__ = [
     "GaussianNB"
     "manhattan", 
     "euclidean",
-    "blobs_data", 
+    "blobs_data_2d",
+    "blobs_data_3d", 
     "sine_data", 
     "linear_data",
 ]
