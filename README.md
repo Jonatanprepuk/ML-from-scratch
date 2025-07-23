@@ -64,6 +64,13 @@ model.train(X,y, epochs=500, print_every=100, batch_size=64, validation_data=(X_
 model.plot_loss()
 ```
 
+## Examples
+
+See [`examples/`](./examples) for notebooks and scripts covering:
+- Linear regression 
+- Autoencoder
+- Classification (Mnist & synthtic)
+
 ## Project Structure
 
 ```
