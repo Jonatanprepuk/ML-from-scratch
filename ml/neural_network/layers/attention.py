@@ -23,8 +23,10 @@ class Attention(Layer, Trainable):
        
        self.S = (self.Q @ np.transpose(self.K, (0, 2, 1))) / np.sqrt(self.d_k)
        
-       self.softmax.forward(self.S, training=False) # change training later
-
+       self.softmax.forward(self.S, training=training)
+       self.A = self.softmax.output
+              
+       self.output = self.A @ self.V 
        
    
     def backward(self, dvalues: np.ndarray) -> None:
@@ -42,5 +44,10 @@ class Attention(Layer, Trainable):
         pass 
 
 if __name__ == "__main__":
-    l = Attention(5,2)
-    print(l.weights)
+    attention = Attention(d_model=32, d_k=16)
+    x = np.random.rand(4, 10, 32)
+    print(x.shape)
+    attention.forward(x, training=False)
+    
+    print(np.sum(attention.A, axis=-1))
+    
